@@ -1,10 +1,18 @@
-import React, { component } from "react";
+import React from "react";
+import FactsContainer from '../containers/FactsContainer';
 
 const Facts = () => (
-  <div>
-    <h3>Facts</h3>
-    <p>This is the main page with the tombstones, map, etc...</p>
-  </div>
+  <React.Fragment>
+    {/* <React.Fragment>
+      <h3>Facts</h3>
+      <p>This is the main page with the tombstones, map, etc...</p>
+
+    </React.Fragment> */}
+
+    <FactsContainer />
+  </React.Fragment>
+
+
 );
 
 

@@ -8,15 +8,11 @@ class FactsContainer extends React.Component {
       fact: 'default fact',
       information: 'default info'
     }
-
-
   }
 
   render() {
     return(
       <p>this is the facts container</p>
-
-
     );
   }
 

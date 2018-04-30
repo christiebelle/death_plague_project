@@ -11,6 +11,7 @@ class Main extends Component {
     this.state = {
       factsArray: []
     }
+    console.log(this.state.factsArray);
   }
 
 componentDidMount(){
@@ -24,7 +25,6 @@ componentDidMount(){
       }
     };
     request.send();
-    console.log(factsArray);
 }
 
   render() {

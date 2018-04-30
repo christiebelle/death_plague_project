@@ -10,6 +10,7 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
     console.console.log(err);
     return;
   }
+  
   const db = client.db("black_death_db");
 
   app.get("/facts", function(req, res){

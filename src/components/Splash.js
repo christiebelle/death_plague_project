@@ -1,11 +1,13 @@
 import React from "react";
 
 const Splash = () => (
-  <div>
-    <h1>Splash Death</h1>
-    <h2>Welcome Traveller! </h2>
-  <h4>Enter, if thou darest...</h4>
-  </div>
+<React.Fragment>
+<section id="main-image">
+</section>
+<canvas id='splash-canvas'>
+</canvas>
+<script src="ashes.js"></script>
+</React.Fragment>
 );
 
 

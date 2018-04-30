@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <canvas id='splash-canvas'></canvas>
-  <script>
-  var canvas = document.getElementById('splash-canvas');
+var canvas = document.getElementById('splash-canvas');
   var context = canvas.getContext("2d");
   var width = canvas.width = window.innerWidth;
   var height = canvas.height = window.innerHeight;
@@ -70,16 +58,8 @@
       }
     }
   }
-  /*________________________________________*/
+
   window.addEventListener('resize', function() {
     canvas.width = w = window.innerWidth;
     canvas.height = h = window.innerHeight;
   }, false);
-  </script>
-  <div id='root'>
-    <section id="main-image">
-    </section>
-  </div>
-</body>
-
-</html>

@@ -1,8 +1,9 @@
 import React from "react";
-
+import Navbar from "../components/Navbar";
 const Header = () => (
   <div>
-    <h3>The Black Death</h3>
+    <h1>The Black Death</h1>
+    <Navbar />
   </div>
 );
 

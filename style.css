@@ -19,10 +19,11 @@ p {
   color: white;
 }
 
-#wrapper {
+#root {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 80px;
 }
 
 #main-image {
@@ -31,7 +32,6 @@ p {
   background-size: contain;
   width: 80%;
   height: 617px;
-  margin-top: 80px;
 }
 
 #splash-canvas{
@@ -42,3 +42,5 @@ p {
   width: 100%;
   height: 100%;
 }
+
+

@@ -1,10 +1,15 @@
 import React from "react";
+import Header from "../components/Header";
+import Map from "../components/Map";
+import Info from "../components/Info";
 
 const Home = () => (
   <div>
-    <h1>The Black Death</h1>
-    <h2>Welcome Traveller! </h2>
-  <h4>Enter, if thou darest...</h4>
+    <React.Fragment>
+      <Header />
+      <Map />
+      <Info />
+    </React.Fragment>
   </div>
 );
 

@@ -1,7 +1,4 @@
-
 import React, { Component } from "react";
-import Header from "./Header";
-import Navbar from "./Navbar";
 import Splash from "./Splash";
 import Home from "./Home";
 import Ask from "./Ask";

@@ -1,4 +1,9 @@
 import React from "react";
-import Map from "../components/Map";
+
+const Map = () => (
+  <div>
+    <p>Yo! Map goes here</p>
+  </div>
+);
 
 export default Map;

@@ -1,4 +1,10 @@
 import React from "react";
-import Info from "../components/Info";
+
+const Info = () => (
+  <div>
+    <p>Yo! Info goes here</p>
+  </div>
+);
+
 
 export default Info;

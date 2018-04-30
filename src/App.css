@@ -18,5 +18,26 @@ p {
   color: white;
 }
 
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
 
+#main-image {
+  background-image: url('black-death-splash.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80%;
+  height: 617px;
+}
 
+#splash-canvas{
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}

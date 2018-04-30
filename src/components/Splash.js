@@ -4,7 +4,7 @@ import EnterButton from "./EnterButton";
 
 const Splash = () => (
 <React.Fragment>
-<div id="wrapper">
+<div className="wrapper">
 <section id="main-image">
 <EnterButton />
 </section>

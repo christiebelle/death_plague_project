@@ -13,23 +13,11 @@ class Main extends Component {
     }
   }
 
-componentDidMount(){
-fetch("http://localhost:3001/facts")
-.then(response => response.json())
-.then(json => this.setState({facts: json}))
-  //
-  // const request = new XMLHttpRequest();
-  //   request.open('GET', "https://localhost:3001/facts");
-  //   request.onload = () => {
-  //     if (request.status === 200) {
-  //       const jsonString = request.responseText;
-  //       const factsArray = JSON.parse(jsonString);
-  //       this.setState({facts: factsArray});
-  //     }
-  //   };
-  //   request.send();
-  //   console.log(this.state.facts);
-}
+  componentDidMount(){
+    fetch("http://localhost:3001/facts")
+    .then(response => response.json())
+    .then(json => this.setState({facts: json}))
+  }
 
   render() {
     return(

@@ -35,12 +35,22 @@ p {
 .wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.header-wrapper, .content-wrapper {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-header {
+header, section.content {
   width: 90%;
   padding: 0 30px;
+}
+
+section.content {
+  padding-top: 30px;
 }
 
 #main-image {

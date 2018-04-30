@@ -9,10 +9,15 @@ class Main extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      facts: []
     }
   }
 
+  componentDidMount(){
+    fetch("http://localhost:3001/facts")
+    .then(response => response.json())
+    .then(json => this.setState({facts: json}))
+  }
 
   render() {
     return(

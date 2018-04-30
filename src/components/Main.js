@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
@@ -22,9 +23,8 @@ class Main extends Component {
     return(
       <Router>
         <React.Fragment>
-          <Header />
-          <Navbar />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Splash} />
+          <Route path="/home" component={Home} />
           <Route path="/overview" component={Overview} />
           <Route path="/facts" component={Facts} />
           <Route path="/ask" component={Ask} />

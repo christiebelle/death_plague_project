@@ -15,14 +15,42 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+h1.replace {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: url(./bd_splash.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 381px;
+  height: 87px;
+  margin: 10px 0 10px;
+}
+
 p {
   color: white;
 }
 
-#wrapper {
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header-wrapper, .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header, section.content {
+  width: 90%;
+  padding: 0 30px;
+}
+
+section.content {
+  padding-top: 30px;
 }
 
 #main-image {

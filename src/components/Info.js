@@ -1,9 +1,9 @@
 import React from "react";
 
 const Info = () => (
-  <div>
+  <section className="content-wrapper content">
     <p>Yo! Info goes here</p>
-  </div>
+  </section>
 );
 
 

@@ -7,12 +7,6 @@ const Navbar = () => (
      <Link to="/home">Home</Link>
    </li>
    <li>
-     <Link to="/overview">Overview</Link>
-   </li>
-   <li>
-     <Link to="/facts">Gruesome Facts</Link>
-   </li>
-   <li>
      <Link to="/ask">Ask the Plague Doctor</Link>
    </li>
  </ul>

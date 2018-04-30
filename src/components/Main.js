@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Home from "./Home";
-import Splash from "./Splash";
 import Overview from "./Overview";
 import Facts from "./Facts";
 import Ask from "./Ask";
@@ -24,7 +23,10 @@ class Main extends Component {
         <React.Fragment>
           <Header />
           <Navbar />
-          <Route exact path="/" component={Splash} />
+          <Route exact path="/" component={Home} />
+          <Route path="/overview" component={Overview} />
+          <Route path="/facts" component={Facts} />
+          <Route path="/ask" component={Ask} />
         </React.Fragment>
       </Router>
     );

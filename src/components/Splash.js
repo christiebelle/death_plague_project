@@ -10,7 +10,6 @@ const Splash = () => (
 </section>
 <canvas id='splash-canvas'>
 </canvas>
-<script src="ashes.js"></script>
 </div>
 
 </React.Fragment>

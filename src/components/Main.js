@@ -13,6 +13,12 @@ class Main extends Component {
     }
   }
 
+  componentDidMount(){
+    fetch("http://localhost:3001/facts")
+    .then(response => response.json())
+    .then(json => this.setState({facts: json}))
+  }
+
 
 
   render() {

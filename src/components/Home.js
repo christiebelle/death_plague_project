@@ -16,11 +16,7 @@ class Home extends React.Component{
     this.sendPoint = this.sendPoint.bind(this);
   }
 
-  componentDidMount(){
-    fetch("http://localhost:3001/facts")
-    .then(response => response.json())
-    .then(json => this.setState({facts: json}))
-  }
+  
 
   sendPoint(){
     this.setState({selectedPoint: {lat:0, lng: 0}});

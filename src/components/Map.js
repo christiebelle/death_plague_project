@@ -6,7 +6,7 @@ class Map extends React.Component {
     super(props);
     this.map = null;
     this.maps = null;
-    this.renderMarker = this.renderMarker.bind(this);
+    // this.renderMarker = this.renderMarker.bind(this);
     this.state = {
       markers: []
     };
@@ -19,29 +19,31 @@ class Map extends React.Component {
     this.maps = maps;
   }
 
-  renderMarker(point){
-    let infoWindow = new this.maps.InfoWindow({
-      content: "blah blah"
-    });
+  // renderMarker(point){
+  //   let infoWindow = new this.maps.InfoWindow({
+  //     content: "blah blah"
+  //   });
+  //
+  //   let marker = new this.maps.Marker({
+  //     position: point,
+  //     map: this.map
+  //   });
+  //
+  //   marker.addListener("click", (event) => {
+  //     infoWindow.open(this.map, marker);
+  //   });
+  //
+  //   this.setState({markers: marker});
+  // }
 
-    let marker = new this.maps.Marker({
-      position: point,
-      map: this.map,
-    });
 
-    marker.addListener("click", (event) => {
-      infoWindow.open(this.map, marker);
-    });
+  // componentDidUpdate(prevProps, prevState, snapshot){
+  //   if(this.state.markers.length ===0 ){
+  //     let point = this.props.point;
+  //     this.renderMarker(point);
+  //   }
+  // }
 
-    this.setState({markers: marker});
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot){
-    if(this.state.markers.length ===0 ){
-      let point = this.props.point;
-      this.renderMarker(point);
-    }
-  }
 
   render(){
     return (

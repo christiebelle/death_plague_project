@@ -13,19 +13,17 @@ class Main extends Component {
     }
   }
 
-  componentDidMount(){
-    fetch("http://localhost:3001/facts")
-    .then(response => response.json())
-    .then(json => this.setState({facts: json}))
-  }
+
 
   render() {
     return(
       <Router>
         <React.Fragment>
+
           <Route exact path="/" component={Splash} />
           <Route path="/home" component={Home} />
           <Route path="/ask" component={Ask} />
+
         </React.Fragment>
       </Router>
     );

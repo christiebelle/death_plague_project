@@ -1,7 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
-import Map from "../components/Map";
-import Info from "../components/Info";
+import Tombstones from "./Tombstones"
+import Map from "./Map"
+
+import MainArticle from "./MainArticle"
+import Image from "./Image"
+
 
 class Home extends React.Component{
   constructor(props){
@@ -12,21 +16,30 @@ class Home extends React.Component{
     this.sendPoint = this.sendPoint.bind(this);
   }
 
+  componentDidMount(){
+    fetch("http://localhost:3001/facts")
+    .then(response => response.json())
+    .then(json => this.setState({facts: json}))
+  }
+
   sendPoint(){
     this.setState({selectedPoint: {lat:0, lng: 0}});
   }
 
   render(){
     return (
-    <div>
-      <React.Fragment>
-        <Header />
-        <Map point={this.state.selectedPoint}/>
-        <Info />
-      </React.Fragment>
-    </div>
-  );
-}}
+      <div>
+        <React.Fragment>
+          <Header />
+          <Map point={this.state.selectedPoint}/>
+
+          <Tombstones />
+          <MainArticle />
+          <Image />
+        </React.Fragment>
+      </div>
+    );
+  }}
 
 
-export default Home;
+  export default Home;

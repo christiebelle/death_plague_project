@@ -25,7 +25,8 @@ class Tombstones extends React.Component {
       <React.Fragment>
         {buttons}
         <article>
-          {this.props.fact.title}
+          <h1>{this.props.fact.title}</h1>
+          <p>{this.props.fact.information}</p>
         </article>
       </React.Fragment>
     )

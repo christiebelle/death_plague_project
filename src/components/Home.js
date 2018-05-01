@@ -31,7 +31,7 @@ class Home extends React.Component{
       <div>
         <React.Fragment>
           <Header />
-          <Map point={this.state.selectedPoint}/>
+          <Map />
 
           <Tombstones />
           <MainArticle />

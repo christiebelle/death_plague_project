@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
-import Tombstones from "./Tombstones"
+import TombstoneContainer from "./TombstoneContainer"
+import FactContainer from './FactContainer';
 import Map from "./Map"
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import MainArticle from "./MainArticle"
@@ -40,10 +41,12 @@ class Home extends React.Component{
         <React.Fragment>
           <Header />
           <Map />
-          <Tombstones
+          <TombstoneContainer
             onFactSelected = {this.handleSelectedFactChanged}
             fact = {this.state.selectedFact}
+            facts ={this.state.facts}
           />
+          <FactContainer />
         </React.Fragment>
       </div>
     );

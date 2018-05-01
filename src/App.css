@@ -77,6 +77,10 @@ section.content {
   height: 100%;
 }
 
+.gm-style-iw {
+  color: #fe001a;
+}
+
 a {
   text-decoration: none;
   color: #4f4f4f;

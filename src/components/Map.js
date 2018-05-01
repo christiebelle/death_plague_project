@@ -38,6 +38,10 @@ class Map extends React.Component {
       infoWindow.open(this.map, marker);
     });
 
+    marker.addListener('mouseout', () => {
+    infoWindow.close();
+});
+
   }
 
 

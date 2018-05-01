@@ -1,46 +1,37 @@
 import React from "react";
 import MainArticle from './MainArticle';
-import Image from "./Image";
-import ReactDOM from 'react-dom'
 import Tombstone from './Tombstone'
 
 class TombstoneContainer extends React.Component {
-  constructor(props){
-    super(props)
-  }
-
-  displayInfo = () =>{
-    return(
-      <div>
-        <h2>{this.props.title}</h2>
-        <h4>{this.props.stat}</h4>
-        <p>{this.props.info}</p>
-      </div>
-    )
+    handleButtonClick = (event) => {
+    this.props.onFactSelected(event.target.value);
   }
 
   render(){
     if(!this.props.facts){
       return null
     }
-    const factNodes = this.props.facts.map((fact, index) => {return (
-      <Tombstone onClick={this.displayInfo}
-        key={fact.id}
-        value={index+1}
-        title={fact.title}
-        stat={fact.stat}
-        info={fact.information}
-        image={fact.image}/>
-      )
-    });
+    let buttons = this.props.facts.map( (fact, index) => {return (
+      <button onClick={this.handleButtonClick} key={fact.id} value={index} title={fact.fact} stat={fact.stat} info={fact.information} image={fact.image}>{index}</button>
+      );
+  }
+  );
+    if(!this.props.fact){
+      return (
+        buttons
+      );
+    }
 
     return (
-      <div>
-        {factNodes}
-      </div>
+      <React.Fragment>
+        {buttons}
+        <article>
+          <h1>{this.props.fact.title}</h1>
+          <p>{this.props.fact.information}</p>
+        </article>
+      </React.Fragment>
     )
   }
 };
-
 
 export default TombstoneContainer;

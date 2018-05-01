@@ -21,6 +21,7 @@ class Tombstones extends React.Component {
         buttons
       );
     }
+
     return (
       <React.Fragment>
         {buttons}
@@ -34,4 +35,4 @@ class Tombstones extends React.Component {
 };
 
 
-export default Tombstones;
+// export default Tombstones;

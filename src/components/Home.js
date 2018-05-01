@@ -13,9 +13,11 @@ class Home extends React.Component{
     super(props)
     this.state = {
       facts: [],
-      selectedPoint: null
+      selectedPoint: null,
+      selectedFact: null
     };
     this.sendPoint = this.sendPoint.bind(this);
+    this.handleSelectedFactChanged = this.handleSelectedFactChanged.bind(this);
   }
 
   componentDidMount(){
@@ -24,7 +26,9 @@ class Home extends React.Component{
     .then(json => this.setState({facts: json}))
   }
 
-
+  handleSelectedFactChanged = (index) => {
+    this.setState({selectedFact: this.state.facts[index]});
+  }
 
   sendPoint(){
     this.setState({selectedPoint: {lat:0, lng: 0}});
@@ -36,9 +40,10 @@ class Home extends React.Component{
         <React.Fragment>
           <Header />
           <Map />
-          <Tombstones />
-          <MainArticle />
-          <Image />
+          <Tombstones
+            onFactSelected = {this.handleSelectedFactChanged}
+            fact = {this.state.selectedFact}
+          />
         </React.Fragment>
       </div>
     );

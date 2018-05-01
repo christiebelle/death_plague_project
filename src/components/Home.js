@@ -47,6 +47,7 @@ class Home extends React.Component{
             facts ={this.state.facts}
           />
           <FactContainer />
+          <Ask />
         </React.Fragment>
       </div>
     );

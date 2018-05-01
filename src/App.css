@@ -5,7 +5,7 @@ body {
   color: white;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   background-color: black;
 }
 
@@ -36,6 +36,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .header-wrapper, .content-wrapper {
@@ -53,13 +54,18 @@ section.content {
   padding-top: 30px;
 }
 
+.wrapper #main-image {
+  align-self: center;
+}
 #main-image {
-  background-image: url('black-death-splash.png');
+  background-image: url('black-death-splash2.png');
   background-repeat: no-repeat;
   background-size: contain;
   width: 80%;
-  height: 617px;
+  min-height: 617px;
   margin-top: 80px;
+  /*align-self: center;*/
+
 }
 
 #splash-canvas{
@@ -79,7 +85,7 @@ a {
 /* Splash page link */
 a.enter {
   z-index: 2;
-  margin-top: 33%;
+  margin-top: 34%;
 
 }
 

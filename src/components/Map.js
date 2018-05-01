@@ -26,7 +26,7 @@ class Map extends React.Component {
 
     let marker = new this.maps.Marker({
       position: point,
-      map: this.map
+      map: this.map,
     });
 
     marker.addListener("click", (event) => {

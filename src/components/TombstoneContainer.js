@@ -8,16 +8,16 @@ class TombstoneContainer extends React.Component {
   constructor(props){
     super(props)
   }
-  handleButtonClick = (event) => {
-    this.props.onFactSelected(event.target.value);
-  }
+  // handleButtonClick = (event) => {
+  //   this.props.onFactSelected(event.target.value);
+  // }
 
   render(){
     if(!this.props.facts){
       return null
     }
     const factNodes = this.props.facts.map((fact, index) => {return (
-    <Tombstone onClick= {this.handleButtonClick}
+    <Tombstone
       value={index+1}
       title={fact.title}
       stat={fact.stat}
@@ -25,18 +25,6 @@ class TombstoneContainer extends React.Component {
       image={fact.image}/>)
     });
 
-    // let buttons = (
-    //   <React.Fragment>
-    //     <button value="0" onClick={this.handleButtonClick}>Fact 0</button>
-    //     <button value="1" onClick={this.handleButtonClick}>Fact 1</button>
-    //   </React.Fragment>
-    // );
-    //
-    // if(!this.props.fact){
-    //   return (
-    //     buttons
-    //   );
-    // }
     return (
       <div>
         {factNodes}

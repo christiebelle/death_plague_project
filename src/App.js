@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Main from './components/Main';
+import Home from './components/Home';
 
 class App extends Component {
 
 
   render() {
     return (
-      <Main />
+      <Home />
     );
   }
 }

@@ -46,7 +46,6 @@ class Home extends React.Component{
             fact = {this.state.selectedFact}
             facts ={this.state.facts}
           />
-          <FactContainer />
         </React.Fragment>
       </div>
     );

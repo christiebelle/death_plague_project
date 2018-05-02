@@ -11,17 +11,5 @@ describe('website functionality', function() {
 
   // write integration tests here in the form of "it should do something..."
   it('should have a landing page', function(){
-    browser.get('/');
-    document.querySelector('.enter').click();
-    browser.sleep(1000).then(function() {
-        expect(browser.getCurrentUrl()).toBe(homeUrl);
-    });
-  });
-
-  it('should display information when a tombstone is clicked', function(){
-    expect()
-  });
-
-  it('should display a random crazy cure when Ask Plague Doctor is clicked', function(){
-    expect()
+     expect()
   });

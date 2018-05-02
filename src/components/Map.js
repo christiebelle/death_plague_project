@@ -32,10 +32,7 @@ class Map extends React.Component {
     let marker = new this.maps.Marker({
       position:  {lat:point.lat, lng:point.lng},
       map: this.map,
-      animation: this.maps.Animation.DROP,
-      url: "./marker-x.svg",
-      anchor: new this.maps.Point(32,32),
-      scaledSize: new this.maps.Size(64,64)
+      animation: this.maps.Animation.DROP
     });
 
     marker.addListener("mouseover", (event) => {

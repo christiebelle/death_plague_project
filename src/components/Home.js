@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
-import TombstoneContainer from "./TombstoneContainer"
+import Footer from "../components/Footer";
+import TombstoneContainer from "./TombstoneContainer";
 import Map from "./Map"
 // import {BrowserRouter as Router, Route} from "react-router-dom";
 // import MainArticle from "./MainArticle"
@@ -20,6 +21,8 @@ class Home extends React.Component{
     this.handleSelectedFactChanged = this.handleSelectedFactChanged.bind(this);
   }
 
+
+
   componentDidMount(){
     fetch("http://localhost:3001/facts")
     .then(response => response.json())
@@ -33,6 +36,8 @@ class Home extends React.Component{
   sendPoint(){
     this.setState({selectedPoint: {lat:0, lng: 0}});
   }
+
+
 
   render(){
     return (
@@ -52,11 +57,10 @@ class Home extends React.Component{
             facts ={this.state.facts}
           />
           </section>
-          <section>
-          <article className="content-wrapper">
-          <Ask />
-          </article>
+          <section className="doc-container">
+            <Ask />
           </section>
+          <Footer />
         </React.Fragment>
       </div>
     );

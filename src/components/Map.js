@@ -27,7 +27,8 @@ class Map extends React.Component {
 
   renderMarker(point){
     let infoWindow = new this.maps.InfoWindow({
-      content: point.text
+      content: point.text,
+      disableAutoPan: true
     });
 
     let icon={

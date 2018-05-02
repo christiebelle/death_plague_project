@@ -53,18 +53,23 @@ h1.replace {
   background-size: contain;
   width: 381px;
   height: 87px;
-  margin: 10px 0 10px;
+  margin: 0 0 20px;
 }
 
 h1.doc-h1 {
   font-size: 220%;
   margin: 0;
-  padding-top: 40px;
+  padding-top: 30px;
+  color: #444;
 }
 
 h2.doc-h2 {
   font-size: 200%;
   margin: 0;
+  background-color: white;
+  padding: 30px;
+  border-radius: 40px;
+  color: #444;
   }
 
 p {
@@ -84,10 +89,16 @@ p.doc-p {
   margin-right: 3%;
 }
 
-.container {
+.container, .doc-container {
   width: 90%;
   margin: 0 auto;;
   padding: 30px 0;
+}
+
+.doc-container {
+  background-color: rgba(166, 192, 197, 0.8);
+  width: 100% !important;
+  padding: 30px 30px !important;
 }
 
 .wrapper {
@@ -101,6 +112,10 @@ p.doc-p {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.header-wrapper {
+  padding-top: 20px;
 }
 
 .text-wrapper {
@@ -145,6 +160,10 @@ border-top: 10px solid #444;
 border-bottom: 10px solid #444;
 }
 
+footer {
+  background-color: #222;
+}
+
 #main-image {
   background-image: url('black-death-splash2.png');
   background-repeat: no-repeat;
@@ -167,6 +186,7 @@ border-bottom: 10px solid #444;
 
 .gm-style-iw {
   color: #fe001a;
+  font-weight: bold;
 }
 
 input:focus,
@@ -188,8 +208,8 @@ a {
   background-color: transparent;
   background-size: contain;
   border: none;
-  height:     50px;
-  width:      50px;
+  height:     60px;
+  width:      60px;
   text-indent:    -999em;
   margin: 10px 10px 10px 0;
   cursor: pointer;

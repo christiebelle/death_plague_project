@@ -26,7 +26,6 @@ class Ask extends React.Component {
 
   render(){
     return (
-      <section className="container">
         <article className="doc-wrapper">
           <div>
             <button className="doc-button" value="askPlagueDoc" onClick={this.handleAskClick}>Hey Plague Doctor! I think I've got the plague! What should I do?</button></div>
@@ -35,7 +34,6 @@ class Ask extends React.Component {
             <p className="doc-p">I think I've got the plague! What should I do?</p>
             <h2 className="doc-h2">{this.state.selectedReply}</h2></div>
         </article>
-      </section>
     )
   }
 

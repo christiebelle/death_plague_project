@@ -17,9 +17,9 @@ class TombstoneContainer extends React.Component {
   }
 
     handleButtonClick = (event) => {
-    this.props.onFactSelected(event.target.value);
-    this.addToDeathCount();
-  }
+  this.props.onFactSelected(event.target.value);
+  this.addToDeathCount();
+}
 
   render(){
     if(!this.props.facts){

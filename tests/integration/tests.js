@@ -14,7 +14,6 @@ describe('website functionality', function() {
     browser.get('/');
     document.querySelector('.enter').click();
     browser.sleep(1000).then(function() {
-        expect(browser.getCurrentUrl()).toBe(homeUrl);
+      expect(browser.getCurrentUrl()).toBe(homeUrl);
     });
-     expect()
   });

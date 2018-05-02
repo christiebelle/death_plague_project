@@ -1,12 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
 import TombstoneContainer from "./TombstoneContainer"
-// import FactContainer from './FactContainer';
 import Map from "./Map"
-import {BrowserRouter as Router, Route} from "react-router-dom";
-import MainArticle from "./MainArticle"
-import Image from "./Image"
-import Splash from "./Splash";
+// import {BrowserRouter as Router, Route} from "react-router-dom";
+// import MainArticle from "./MainArticle"
+// import Image from "./Image"
+// import Splash from "./Splash";
 import Ask from "./Ask";
 
 class Home extends React.Component{
@@ -40,6 +39,8 @@ class Home extends React.Component{
       <div>
         <React.Fragment>
           <Header />
+          <h3>Scroll across to Europe and follows the Black Deaths Journey</h3>
+          <p>Hover over the markers for some interesting facts about key locations</p>
           <Map />
           <TombstoneContainer
             onFactSelected = {this.handleSelectedFactChanged}

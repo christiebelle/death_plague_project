@@ -6,7 +6,7 @@ body {
   color: white;
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #000;
   line-height: 1.5;
   background: url('./black-death-background.jpg') no-repeat center center fixed;
@@ -22,8 +22,9 @@ body:before {
     z-index: -1;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
 }
+
 .bg-overlay {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: -1;
@@ -38,6 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-family: "Alegreya", serif;
   font-weight: 700;
+  margin-top: 0 !important;
+
 }
 
 h1.replace {
@@ -158,7 +161,7 @@ a {
 /* Splash page link */
 a.enter {
   z-index: 2;
-  margin-top: 34%;
+  margin-top: 35%;
 
 }
 
@@ -169,7 +172,7 @@ a.enter {
 
 .enter {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 5px 24px;
   border: 1px solid #4f4f4f;
   border-radius: 4px;
   transition: all 0.2s ease-in;
@@ -222,4 +225,30 @@ a.enter {
   top: -45%;
   background-color: #fe001a;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
 }

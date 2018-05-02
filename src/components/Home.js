@@ -39,9 +39,12 @@ class Home extends React.Component{
       <div>
         <React.Fragment>
           <Header />
-          <h3>Scroll across to Europe and follows the Black Deaths Journey</h3>
-          <p>Hover over the markers for some interesting facts about key locations</p>
           <Map />
+          <section className="map-text">
+          <div className="content-wrapper">
+          <p>Scroll across to Europe and follows the Black Deaths Journey. <strong>Hover</strong> over the markers for some interesting facts about key locations</p>
+          </div>
+          </section>
           <TombstoneContainer
             onFactSelected = {this.handleSelectedFactChanged}
             fact = {this.state.selectedFact}

@@ -43,6 +43,7 @@ class TombstoneContainer extends React.Component {
         <article className="text-wrapper">
         <div className="text-content">
           <h1>{this.props.fact.title}</h1>
+          <h4>Death Toll: {this.state.deathCount} Million</h4>
           <p>{this.props.fact.information}</p>
         </div>
         <div className="image-content">
@@ -50,7 +51,6 @@ class TombstoneContainer extends React.Component {
         </div>
         </article>
         </div>
-        <h1>Death Toll: {this.state.deathCount} Million</h1>
       </React.Fragment>
     )
   }

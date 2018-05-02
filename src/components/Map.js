@@ -31,7 +31,8 @@ class Map extends React.Component {
 
     let marker = new this.maps.Marker({
       position:  {lat:point.lat, lng:point.lng},
-      map: this.map
+      map: this.map,
+      animation: this.maps.Animation.DROP,
     });
 
     marker.addListener("mouseover", (event) => {
@@ -50,11 +51,11 @@ class Map extends React.Component {
 
     return (
       <div style={{height: "300px", width: "100%"}}>
+
         <GoogleMapReact
           center = {{lat: 40.142, lng: 94.661}}
           zoom = {3}
-
-          options = {{styles: exampleMapStyles,
+          options = {{styles: mapStyles,
             disableDefaultUI: true }}
             onGoogleApiLoaded={this.storeMaps}
             yesIWantToUseGoogleMapApiInternals={true}
@@ -66,7 +67,7 @@ class Map extends React.Component {
   }
 
 
-  const exampleMapStyles = [
+  const mapStyles = [
     {
       "elementType": "geometry",
       "stylers": [

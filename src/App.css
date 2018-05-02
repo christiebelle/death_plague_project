@@ -7,13 +7,23 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  background-color: #666;
+  background-color: #000;
   line-height: 1.5;
-  background-image: url('./black-death-background.jpg');
+  background: url('./black-death-background.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
 }
 
+body:before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+}
 .bg-overlay {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: -1;

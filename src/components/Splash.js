@@ -2,6 +2,7 @@ import React from "react";
 import EnterButton from "./EnterButton";
 
 
+
 const Splash = () => (
 <React.Fragment>
 <div className="wrapper">

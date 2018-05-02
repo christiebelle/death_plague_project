@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Home from './components/Home';
+import Routing from './components/Routing';
 
 class App extends Component {
 
 
   render() {
     return (
-      <Home />
+      <Routing />
     );
   }
 }

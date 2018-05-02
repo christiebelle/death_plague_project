@@ -11,20 +11,20 @@
     "webdriver-manager": "^10.2.7",
     "protractor": "^4.0.10"
   },
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "webdriver-update": "webdriver-manager update",
     "webdriver": "webdriver-manager start",
     "protractor": "protractor conf.js",
-    "test": "react-scripts test --env=jsdom",
+    "test": "mocha tests/unit/spec.js",
     "eject": "react-scripts eject"
   },
-
   "proxy": "http://localhost:3001",
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^3.5.3",
     "protractor": "^5.3.1"
   }
-
 }

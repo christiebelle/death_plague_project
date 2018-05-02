@@ -11,12 +11,13 @@ body {
   line-height: 1.5;
   background-image: url('./black-death-background.jpg');
   background-size: cover;
+  height: 100%;
 }
 
 .bg-overlay {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: -1;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;

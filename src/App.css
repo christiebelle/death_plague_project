@@ -113,6 +113,13 @@ img.stretch {
   border: 15px solid #444;
 }
 
+.map-canvas {
+height: 300px;
+width: 100%;
+border-top: 10px solid #444;
+border-bottom: 10px solid #444;
+}
+
 #main-image {
   background-image: url('black-death-splash2.png');
   background-repeat: no-repeat;

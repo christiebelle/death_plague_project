@@ -56,7 +56,7 @@ class Map extends React.Component {
 
   render(){
     return (
-      <div style={{height: "300px", width: "100%"}}>
+      <div className="map-canvas">
 
         <GoogleMapReact
           center = {{lat: 40.142, lng: 94.661}}

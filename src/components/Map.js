@@ -33,6 +33,9 @@ class Map extends React.Component {
       position:  {lat:point.lat, lng:point.lng},
       map: this.map,
       animation: this.maps.Animation.DROP,
+      url: "./marker-x.svg",
+      anchor: new this.maps.Point(32,32),
+      scaledSize: new this.maps.Size(64,64)
     });
 
     marker.addListener("mouseover", (event) => {
@@ -42,6 +45,7 @@ class Map extends React.Component {
     marker.addListener('mouseout', () => {
     infoWindow.close();
 });
+
 
   }
 

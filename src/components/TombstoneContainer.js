@@ -1,10 +1,24 @@
 import React from "react";
-import MainArticle from './MainArticle';
-import Tombstone from './Tombstone'
+// import MainArticle from './MainArticle';
+// import Tombstone from './Tombstone'
 
 class TombstoneContainer extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      deathCount: 0
+    }
+  }
+
+  addToDeathCount(){
+    if(this.state.deathCount <= 91){
+      this.setState((prevState) => ({deathCount: prevState.deathCount + 10}))
+    }
+  }
+
     handleButtonClick = (event) => {
     this.props.onFactSelected(event.target.value);
+    this.addToDeathCount();
   }
 
   render(){
@@ -32,10 +46,11 @@ class TombstoneContainer extends React.Component {
           <p>{this.props.fact.information}</p>
         </div>
         <div className="image-content">
-          <p><img className="stretch" src={'../images/'+this.props.fact.image} /></p>
+          <p><img className="stretch" alt={this.props.fact.title} src={'../images/'+this.props.fact.image} /></p>
         </div>
         </article>
         </div>
+        <h1>Death Toll: {this.state.deathCount} Million</h1>
       </React.Fragment>
     )
   }

@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya:400,700,800|Lato:300,400,700');
 @import url("normalize.css");
+@import url("balloon.css");
 
 body {
   color: white;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
-  background-color: black;
+  background-color: #666;
+  line-height: 1.5;
+  background-image: url('./black-death-background.jpg');
+  background-size: cover;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,6 +44,17 @@ p {
   color: white;
 }
 
+.text-content, .image-content {
+  width: 45%;
+  margin: 3%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;;
+  padding: 0 30px 0 0;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -41,13 +64,19 @@ p {
 
 .header-wrapper, .content-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.text-wrapper {
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 header, section.content {
   width: 90%;
-  padding: 0 30px;
+  padding: 0 30px ;
 }
 
 section.content {
@@ -57,6 +86,12 @@ section.content {
 .wrapper #main-image {
   align-self: center;
 }
+
+img.stretch {
+  width: 100%;
+  border: 15px solid #444;
+}
+
 #main-image {
   background-image: url('black-death-splash2.png');
   background-repeat: no-repeat;
@@ -81,9 +116,30 @@ section.content {
   color: #fe001a;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 a {
   text-decoration: none;
   color: #4f4f4f;
+}
+
+/* Tombstone button */
+.tombstone-button
+{
+  background-image:   url(tombstone.svg);
+  background-repeat:  no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  height:     50px;
+  width:      50px;
+  text-indent:    -999em;
+  margin: 10px;
 }
 
 /* Splash page link */

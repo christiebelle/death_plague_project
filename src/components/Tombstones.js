@@ -26,8 +26,13 @@ class Tombstones extends React.Component {
       <React.Fragment>
         {buttons}
         <article>
+        <div>
           <h1>{this.props.fact.title}</h1>
           <p>{this.props.fact.information}</p>
+        </div>
+        <div>
+          <p><img src=`../images/{this.props.fact.image}` /></p>
+        </div>
         </article>
       </React.Fragment>
     )
@@ -35,4 +40,4 @@ class Tombstones extends React.Component {
 };
 
 
-// export default Tombstones;
+ export default Tombstones;

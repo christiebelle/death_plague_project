@@ -11,10 +11,11 @@ describe('website functionality', function() {
 
   // write integration tests here in the form of "it should do something..."
   it('should have a landing page', function(){
-    running_total = element(by.css('#running_total'))
-    element(by.css('#number1')).click();
-    expect(running_total.getAttribute('value')).to.eventually.equal('1')
-    expect()
+    browser.get('/');
+    document.querySelector('.enter').click();
+    browser.sleep(1000).then(function() {
+        expect(browser.getCurrentUrl()).toBe(homeUrl);
+    });
   });
 
   it('should display information when a tombstone is clicked', function(){

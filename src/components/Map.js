@@ -33,7 +33,7 @@ class Map extends React.Component {
     let icon={
       url: "../marker-x.svg",
       anchor: new this.maps.Point(32,32),
-      scaledSize: new this.maps.Size(64,64)}
+      scaledSize: new this.maps.Size(32,32)}
 
     let marker = new this.maps.Marker({
       position:  {lat:point.lat, lng:point.lng},

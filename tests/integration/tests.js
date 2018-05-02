@@ -22,3 +22,11 @@ describe('website functionality', function() {
       expected = url;
     }).then(function(){expect(expected).to.equal('http://localhost:3000/home')})})
   });
+
+  it('should display information when a tombstone is clicked', function(){
+    expect()
+  });
+
+  it('should display a random crazy cure when Ask Plague Doctor is clicked', function(){
+    expect()
+  });

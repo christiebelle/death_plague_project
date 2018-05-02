@@ -9,6 +9,16 @@ body {
   font-size: 16px;
   background-color: #666;
   line-height: 1.5;
+  background-image: url('./black-death-background.jpg');
+  background-size: cover;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

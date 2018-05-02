@@ -22,6 +22,7 @@ class Map extends React.Component {
     for (let marker of markers){
       this.renderMarker(marker)
     }
+
   }
 
   renderMarker(point){
@@ -29,10 +30,16 @@ class Map extends React.Component {
       content: point.text
     });
 
+    let icon={
+      url: "../marker-x.svg",
+      anchor: new this.maps.Point(32,32),
+      scaledSize: new this.maps.Size(64,64)}
+
     let marker = new this.maps.Marker({
       position:  {lat:point.lat, lng:point.lng},
       map: this.map,
-      animation: this.maps.Animation.DROP
+      animation: this.maps.Animation.DROP,
+      icon: icon
     });
 
     marker.addListener("mouseover", (event) => {
@@ -48,8 +55,6 @@ class Map extends React.Component {
 
 
   render(){
-    // var marker = require('marker-x.svg');
-
     return (
       <div style={{height: "300px", width: "100%"}}>
 

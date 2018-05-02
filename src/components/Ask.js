@@ -8,6 +8,7 @@ class Ask extends React.Component {
     this.state = {
       replies: Replies,
       selectedReply: null
+      // null
     };
 
       this.handleAskClick = this.handleAskClick.bind(this);
@@ -37,11 +38,6 @@ class Ask extends React.Component {
 
 
 }
-
-
-
-
-
 
 
 export default Ask;

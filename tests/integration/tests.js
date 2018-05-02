@@ -8,14 +8,19 @@ describe('website functionality', function() {
     browser.ignoreSynchronization = true;
     browser.get('http://localhost:3000');
   });
+});
 
   // write integration tests here in the form of "it should do something..."
   it('should have a landing page', function(){
-    browser.get('/');
-    document.querySelector('.enter').click();
-    browser.sleep(1000).then(function() {
-        expect(browser.getCurrentUrl()).toBe(homeUrl);
-    });
+    var expected;
+    this.timeout(15000);
+    browser.ignoreSynchronization = true;
+    browser.get('http://localhost:3000');
+    element(by.css(".enter")).click();
+    browser.sleep().then(function(){
+      browser.getCurrentUrl().then(function(url){
+      expected = url;
+    }).then(function(){expect(expected).to.equal('http://localhost:3000/home')})})
   });
 
   it('should display information when a tombstone is clicked', function(){

@@ -56,19 +56,38 @@ h1.replace {
   margin: 10px 0 10px;
 }
 
+h1.doc-h1 {
+  font-size: 220%;
+  margin: 0;
+  padding-top: 40px;
+}
+
+h2.doc-h2 {
+  font-size: 200%;
+  margin: 0;
+  }
+
 p {
   color: white;
+  margin-top: 0;
+}
+p.doc-p {
+  font-size: 110%;
+}
+
+.doc-text {
+  margin-top: 50px;
 }
 
 .text-content, .image-content {
   width: 45%;
-  margin: 3%;
+  margin-right: 3%;
 }
 
 .container {
   width: 90%;
   margin: 0 auto;;
-  padding: 0 30px 0 0;
+  padding: 30px 0;
 }
 
 .wrapper {
@@ -88,6 +107,12 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.doc-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 header, section.content {
@@ -157,8 +182,7 @@ a {
 }
 
 /* Tombstone button */
-.tombstone-button
-{
+.tombstone-button {
   background-image:   url(tombstone.svg);
   background-repeat:  no-repeat;
   background-color: transparent;
@@ -167,13 +191,28 @@ a {
   height:     50px;
   width:      50px;
   text-indent:    -999em;
-  margin: 10px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+}
+
+/* Doc button */
+.doc-button {
+  background-image:   url(doctor-portrait.png);
+  background-repeat:  no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  height: 350px;
+  width: 350px;
+  text-indent: -999em;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
 }
 
 /* Splash page link */
 a.enter {
   z-index: 2;
-  margin-top: 35%;
+  margin-top: 37%;
 
 }
 

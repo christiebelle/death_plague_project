@@ -26,10 +26,16 @@ class Ask extends React.Component {
 
   render(){
     return (
-      <div>
-        <button value="askPlagueDoc" onClick={this.handleAskClick}>Hey Plague Doctor! I think I've got the plague! What should I do?</button>
-        <h3>{this.state.selectedReply}</h3>
-      </div>
+      <section className="container">
+        <article className="doc-wrapper">
+          <div>
+            <button className="doc-button" value="askPlagueDoc" onClick={this.handleAskClick}>Hey Plague Doctor! I think I've got the plague! What should I do?</button></div>
+          <div className="doc-text">
+            <h1 className="doc-h1">Hey Plague Doctor! </h1>
+            <p className="doc-p">I think I've got the plague! What should I do?</p>
+            <h2 className="doc-h2">{this.state.selectedReply}</h2></div>
+        </article>
+      </section>
     )
   }
 

@@ -41,16 +41,22 @@ class Home extends React.Component{
           <Header />
           <Map />
           <section className="map-text">
-          <div className="content-wrapper">
+          <article className="content-wrapper">
           <p>Scroll across to Europe and follows the Black Deaths Journey. <strong>Hover</strong> over the markers for some interesting facts about key locations</p>
-          </div>
+          </article>
           </section>
+          <section className="container">
           <TombstoneContainer
             onFactSelected = {this.handleSelectedFactChanged}
             fact = {this.state.selectedFact}
             facts ={this.state.facts}
           />
+          </section>
+          <section>
+          <article className="content-wrapper">
           <Ask />
+          </article>
+          </section>
         </React.Fragment>
       </div>
     );

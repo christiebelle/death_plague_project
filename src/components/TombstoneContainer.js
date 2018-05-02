@@ -38,7 +38,6 @@ class TombstoneContainer extends React.Component {
 
     return (
       <React.Fragment>
-      <div className="container">
         {buttons}
         <article className="text-wrapper">
         <div className="text-content">
@@ -50,7 +49,6 @@ class TombstoneContainer extends React.Component {
           <p><img className="stretch" alt={this.props.fact.title} src={'../images/'+this.props.fact.image} /></p>
         </div>
         </article>
-        </div>
       </React.Fragment>
     )
   }

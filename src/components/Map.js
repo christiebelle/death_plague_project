@@ -1,14 +1,15 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
+import Locations from "../db/locations.js"
+
 
 class Map extends React.Component {
   constructor(props){
     super(props);
     this.map = null;
     this.maps = null;
-    // this.renderMarker = this.renderMarker.bind(this);
     this.state = {
-      markers: []
+      markers: Locations
     };
 
     this.storeMaps = this.storeMaps.bind(this);
@@ -17,38 +18,39 @@ class Map extends React.Component {
   storeMaps({map, maps}){
     this.map = map;
     this.maps = maps;
+    let markers = this.state.markers
+    for (let marker of markers){
+      this.renderMarker(marker)
+    }
   }
 
-  // renderMarker(point){
-  //   let infoWindow = new this.maps.InfoWindow({
-  //     content: "blah blah"
-  //   });
-  //
-  //   let marker = new this.maps.Marker({
-  //     position: point,
-  //     map: this.map
-  //   });
-  //
-  //   marker.addListener("click", (event) => {
-  //     infoWindow.open(this.map, marker);
-  //   });
-  //
-  //   this.setState({markers: marker});
-  // }
+  renderMarker(point){
+    let infoWindow = new this.maps.InfoWindow({
+      content: point.text
+    });
 
-  // componentDidUpdate(prevProps, prevState, snapshot){
-  //   if(this.state.markers.length ===0 ){
-  //     let point = this.props.point;
-  //     this.renderMarker(point);
-  //   }
-  // }
+    let marker = new this.maps.Marker({
+      position:  {lat:point.lat, lng:point.lng},
+      map: this.map
+    });
+
+    marker.addListener("mouseover", (event) => {
+      infoWindow.open(this.map, marker);
+    });
+
+    marker.addListener('mouseout', () => {
+    infoWindow.close();
+});
+
+  }
+
 
   render(){
     return (
       <div style={{height: "300px", width: "100%"}}>
         <GoogleMapReact
           center = {{lat: 40.142, lng: 94.661}}
-          zoom = {4}
+          zoom = {3}
           options = {{styles: exampleMapStyles,
             disableDefaultUI: true }}
             onGoogleApiLoaded={this.storeMaps}

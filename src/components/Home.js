@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import TombstoneContainer from "./TombstoneContainer"
-// import FactContainer from './FactContainer';
 import Map from "./Map"
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import MainArticle from "./MainArticle"

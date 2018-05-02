@@ -12,7 +12,7 @@ class TombstoneContainer extends React.Component {
       return null
     }
     let buttons = this.props.facts.map( (fact, index) => {return (
-      <button className="tombstone-button" onClick={this.handleButtonClick} key={fact.id} value={index} title={fact.fact} info={fact.information} image={fact.image}>{index}</button>
+      <button className="tombstone-button" data-balloon={fact.fact} data-balloon-pos="up" onClick={this.handleButtonClick} key={index} value={index}>{index}</button>
       );
   }
   );

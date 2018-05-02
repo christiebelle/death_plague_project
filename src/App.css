@@ -6,7 +6,7 @@ body {
   color: white;
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #000;
   line-height: 1.5;
   background: url('./black-death-background.jpg') no-repeat center center fixed;
@@ -24,6 +24,7 @@ body:before {
     left: 0;
     background: rgba(0, 0, 0, 0.9);
 }
+
 .bg-overlay {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: -1;
@@ -38,6 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-family: "Alegreya", serif;
   font-weight: 700;
+  margin-top: 0 !important;
+
 }
 
 h1.replace {
@@ -158,7 +161,7 @@ a {
 /* Splash page link */
 a.enter {
   z-index: 2;
-  margin-top: 34%;
+  margin-top: 35%;
 
 }
 
@@ -169,7 +172,7 @@ a.enter {
 
 .enter {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 5px 24px;
   border: 1px solid #4f4f4f;
   border-radius: 4px;
   transition: all 0.2s ease-in;

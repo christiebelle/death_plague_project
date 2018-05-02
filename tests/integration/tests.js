@@ -13,3 +13,11 @@ describe('website functionality', function() {
   it('should have a landing page', function(){
     expect()
   });
+
+  it('should display information when a tombstone is clicked', function(){
+    expect()
+  });
+
+  it('should display a random crazy cure when Ask Plague Doctor is clicked', function(){
+    expect()
+  });

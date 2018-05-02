@@ -14,11 +14,13 @@ body {
 }
 
 .bg-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

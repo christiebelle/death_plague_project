@@ -50,8 +50,6 @@ class Map extends React.Component {
 
     return (
       <div style={{height: "300px", width: "100%"}}>
-        <h3>Scroll across to Europe and follows the Black Deaths Journey</h3>
-        <p>Hover over the markers for some interesting facts about key locations</p>
         <GoogleMapReact
           center = {{lat: 40.142, lng: 94.661}}
           zoom = {3}

@@ -12,11 +12,13 @@ describe('website functionality', function() {
 
   // write integration tests here in the form of "it should do something..."
   it('should have a landing page', function(){
+    var expected;
     this.timeout(15000);
     browser.ignoreSynchronization = true;
     browser.get('http://localhost:3000');
     element(by.css(".enter")).click();
     browser.sleep().then(function(){
-      expect(browser.getCurrentUrl()).to.equal('http://localhost:3000/home');
-    })
+      browser.getCurrentUrl().then(function(url){
+      expected = url;
+    }).then(function(){expect(expected).to.equal('http://localhost:3000/home')})})
   });

@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import TombstoneContainer from "./TombstoneContainer"
 import Map from "./Map"
-import {BrowserRouter as Router, Route} from "react-router-dom";
-import MainArticle from "./MainArticle"
-import Image from "./Image"
-import Splash from "./Splash";
+// import {BrowserRouter as Router, Route} from "react-router-dom";
+// import MainArticle from "./MainArticle"
+// import Image from "./Image"
+// import Splash from "./Splash";
 import Ask from "./Ask";
 
 class Home extends React.Component{

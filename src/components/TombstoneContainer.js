@@ -1,6 +1,6 @@
 import React from "react";
-import MainArticle from './MainArticle';
-import Tombstone from './Tombstone'
+// import MainArticle from './MainArticle';
+// import Tombstone from './Tombstone'
 
 class TombstoneContainer extends React.Component {
   constructor(props){
@@ -46,7 +46,7 @@ class TombstoneContainer extends React.Component {
           <p>{this.props.fact.information}</p>
         </div>
         <div className="image-content">
-          <p><img className="stretch" src={'../images/'+this.props.fact.image} /></p>
+          <p><img className="stretch" alt={this.props.fact.title} src={'../images/'+this.props.fact.image} /></p>
         </div>
         </article>
         </div>

@@ -46,6 +46,8 @@ class Map extends React.Component {
 
 
   render(){
+    // var marker = require('marker-x.svg');
+
     return (
       <div style={{height: "300px", width: "100%"}}>
         <h3>Scroll across to Europe and follows the Black Deaths Journey</h3>
@@ -53,6 +55,7 @@ class Map extends React.Component {
         <GoogleMapReact
           center = {{lat: 40.142, lng: 94.661}}
           zoom = {3}
+
           options = {{styles: exampleMapStyles,
             disableDefaultUI: true }}
             onGoogleApiLoaded={this.storeMaps}

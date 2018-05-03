@@ -9,7 +9,8 @@ class Map extends React.Component {
     this.map = null;
     this.maps = null;
     this.state = {
-      markers: Locations
+      markers: Locations,
+      center: {lat: 40.142, lng: 94.661}
     };
 
     this.storeMaps = this.storeMaps.bind(this);
@@ -57,9 +58,8 @@ class Map extends React.Component {
   render(){
     return (
       <div className="map-canvas">
-
         <GoogleMapReact
-          center = {{lat: 40.142, lng: 94.661}}
+          center = {this.state.center}
           zoom = {1}
           options = {{styles: mapStyles,
             disableDefaultUI: true }}

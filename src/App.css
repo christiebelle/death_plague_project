@@ -25,22 +25,11 @@ body:before {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.bg-overlay {
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: white;
   font-family: "Alegreya", serif;
   font-weight: 700;
   margin-top: 0 !important;
-
 }
 
 h1.replace {
@@ -54,6 +43,19 @@ h1.replace {
   width: 381px;
   height: 87px;
   margin: 0 0 20px;
+}
+
+h2.replace {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: url(./bd_splash.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 60px;
+  margin: 0 0 20px 30px;
 }
 
 h1.doc-h1 {
@@ -98,7 +100,7 @@ p.doc-p {
 .doc-container {
   background-color: rgba(166, 192, 197, 0.8);
   width: 100% !important;
-  padding: 30px 30px !important;
+  padding: 0 !important;
 }
 
 .wrapper {
@@ -225,7 +227,7 @@ a {
   height: 350px;
   width: 350px;
   text-indent: -999em;
-  margin: 10px 10px 10px 0;
+  margin: 20px 10px 20px 30px;
   cursor: pointer;
 }
 

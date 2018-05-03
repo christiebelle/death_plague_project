@@ -17,9 +17,9 @@ class TombstoneContainer extends React.Component {
   }
 
     handleButtonClick = (event) => {
-  this.props.onFactSelected(event.target.value);
-  this.addToDeathCount();
-}
+    this.props.onFactSelected(event.target.value);
+    this.addToDeathCount();
+  }
 
   render(){
     if(!this.props.facts){
@@ -38,6 +38,7 @@ class TombstoneContainer extends React.Component {
 
     return (
       <React.Fragment>
+      <section className="container">
         {buttons}
         <article className="text-wrapper">
         <div className="text-content">
@@ -49,6 +50,7 @@ class TombstoneContainer extends React.Component {
           <p><img className="stretch" alt={this.props.fact.title} src={'../images/'+this.props.fact.image} /></p>
         </div>
         </article>
+        </section>
       </React.Fragment>
     )
   }

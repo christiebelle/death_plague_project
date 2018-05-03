@@ -38,19 +38,17 @@ class TombstoneContainer extends React.Component {
 
     return (
       <React.Fragment>
-      <section className="container">
         {buttons}
+          <h4>Death Toll: {this.state.deathCount} Million</h4>
         <article className="text-wrapper">
         <div className="text-content">
           <h1>{this.props.fact.title}</h1>
-          <h4>Death Toll: {this.state.deathCount} Million</h4>
           <p>{this.props.fact.information}</p>
         </div>
         <div className="image-content">
           <p><img className="stretch" alt={this.props.fact.title} src={'../images/'+this.props.fact.image} /></p>
         </div>
         </article>
-        </section>
       </React.Fragment>
     )
   }
